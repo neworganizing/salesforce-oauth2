@@ -74,7 +74,7 @@ class SalesforceOAuth2(object):
 
         if 'access_token' in response_json:
             self.access_token = response_json['access_token']
-        return response
+        return response_json
 
     def generate_signature(self, id, issued_at):
         data = "{id}{issued}".format(id=id, issued=issued_at)
