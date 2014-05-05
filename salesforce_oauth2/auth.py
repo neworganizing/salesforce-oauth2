@@ -62,7 +62,7 @@ class SalesforceOAuth2(object):
         if 'access_token' in response_json:
             self.access_token = response_json['access_token']
         if 'refresh_token' in response_json:
-            self.refresh_token = response_json['access_token']
+            self.refresh_token = response_json['refresh_token']
         return response_json
 
     def refresh_token(self, refresh_token):
